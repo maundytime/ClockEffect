@@ -1,0 +1,24 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target x86_64-apple-ios15.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ClockEffect
+@_exported import ClockEffect
+import Swift
+import SwiftUI
+import WidgetKit
+import _Concurrency
+public struct ClockEffectModifier : SwiftUI.ViewModifier {
+  public enum Period {
+    case custom(Foundation.TimeInterval)
+    case second
+    case hour
+    case minute
+  }
+  public init(_ period: ClockEffect.ClockEffectModifier.Period, in timezone: Foundation.TimeZone, anchor: SwiftUI.UnitPoint)
+  @_Concurrency.MainActor(unsafe) public func body(content: ClockEffect.ClockEffectModifier.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s11ClockEffect0aB8ModifierV4body7contentQr7SwiftUI05_ViewC8_ContentVyACG_tF", 0) __
+}
+extension SwiftUI.View {
+  public func clockEffect(_ period: ClockEffect.ClockEffectModifier.Period, in timezone: Foundation.TimeZone = .current, anchor: SwiftUI.UnitPoint = .center) -> some SwiftUI.View
+  
+}

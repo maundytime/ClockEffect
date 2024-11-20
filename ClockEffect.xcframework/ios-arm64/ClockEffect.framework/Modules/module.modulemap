@@ -1,0 +1,11 @@
+framework module ClockEffect {
+  umbrella header "ClockEffect.h"
+
+  export *
+  module * { export * }
+}
+
+module ClockEffect.Swift {
+    header "ClockEffect-Swift.h"
+    requires objc
+}
